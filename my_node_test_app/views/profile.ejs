@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="iconfont/material-icons.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <title>Document</title>
+
+    <style>
+        body{
+            background: lightblue;
+            font-family: sans-serif;
+            color: #fff;
+            padding: 30px;
+        }
+
+        h2{
+            font-size: 30px;
+            text-align: center;
+        }
+        p{
+            font-size: 15px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <h2>Welcome to the profile <%= person %></h2>
+    <p>Get to know our staffs</p>
+    <p>Age: <em><%= data.age %></em></p>
+    <p>Job: <em><%= data.job %></em></p>
+    <h6>Hobbies</h6>
+    <ul>
+        <% data.hobbies.forEach(function(item){ %>
+            <li><%= item %> </li>
+        <% }); %>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="stylesheet" href="/assets/css/materialize.min.css">
+    <link rel="stylesheet" href="/assets/iconfont/material-icons.css">
+    <link rel="stylesheet" href="/assets/css/animate.min.css">
+    <title>contact us</title>
+</head>
+<body>
+
+    <!-- including the nav ejs file -->
+    <% include partial/nav.ejs %>
+
+    <h2>Welcome to the contact page</h2>
+    <p>feel free to contact us anytime</p>
+    <p><%= qs.person %></p>
+
+    <!-- this is the form -->
+    <form id="contact-form" method="POST" action="/contact">
+        <label for="name">Who do you want to contact?</label>
+        <input type="text" name="name" id="#" value="<%= qs.person %>">
+        <label for="department">what department</label>
+        <input type="text" name="depart" id="#" value="<%= qs.depart %>">
+        <label for="email">email</label>
+        <input type="email" name="email" id="#">
+        <input type="submit" value="submit">
+    </form>
+
+    <!-- including the footer -->
+    <% include partial/footer.ejs %>
+</body>
+</html>
